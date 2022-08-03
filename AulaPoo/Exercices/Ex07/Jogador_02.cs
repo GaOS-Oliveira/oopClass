@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AulaPoo.Exercices.Ex06
+namespace AulaPoo.Exercices.Ex07
 {
-    public class Jogador
+    public class Jogador_02 : IJogador_02
     {
         public string Nome { get; set; }
         public float Vida { get; set; }
@@ -22,7 +22,7 @@ namespace AulaPoo.Exercices.Ex06
 
         public Acoes AcaoAtual { get; set; }
 
-        public Jogador(string _nome, float _vida = 100f)
+        public Jogador_02(string _nome, float _vida = 100f)
         {
             Nome = _nome;
             Vida = _vida;
@@ -54,6 +54,12 @@ namespace AulaPoo.Exercices.Ex06
                 AcaoAtual = Acoes.Inválida;
                 Console.WriteLine("\nAção Inválida!");
             }
+        }
+
+        public string Morrer()
+        {
+            Vida = 0;
+            return "Game Over";
         }
     }
 }

@@ -8,8 +8,15 @@ namespace AulaPoo.Exercices.Ex02
 {
     public class Voador_02 : Inimigo_02
     {
-        public int Asas = 2;
-        public float AlturaMax = 100.0f;
+        public int Asas { get; set; }
+        public float AlturaMax { get; set; }
+
+        public Voador_02(string _nome, int _asas = 2, float _altura = 100.0f)
+        {
+            Asas = _asas;
+            AlturaMax = _altura;
+            Nome = _nome;
+        }
 
         public string Subir()
         {

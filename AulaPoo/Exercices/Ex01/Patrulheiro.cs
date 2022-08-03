@@ -8,8 +8,13 @@ namespace AulaPoo.Exercices.Ex01
 {
     public class Patrulheiro : Inimigo
     {
-        public bool Perseguindo = false;
-        public float Velocidade = 15.0f;
+        public bool Perseguindo { get; set; }
+        public float Velocidade { get; set; }
+
+        public Patrulheiro(float _velocidade = 15.0f)
+        {
+            Velocidade = _velocidade;
+        }
 
         public string Patrulhar()
         {

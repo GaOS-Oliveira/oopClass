@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AulaPoo.Exercices.Ex06
+namespace AulaPoo.Exercices.Ex09
 {
-    public class Jogador
+    public class Jogador_04
     {
         public string Nome { get; set; }
         public float Vida { get; set; }
@@ -22,7 +22,12 @@ namespace AulaPoo.Exercices.Ex06
 
         public Acoes AcaoAtual { get; set; }
 
-        public Jogador(string _nome, float _vida = 100f)
+        public Jogador_04(string _nome)
+        {
+            Nome = _nome;
+        }
+
+        public Jogador_04(string _nome, float _vida)
         {
             Nome = _nome;
             Vida = _vida;

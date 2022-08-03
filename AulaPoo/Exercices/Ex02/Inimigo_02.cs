@@ -8,10 +8,15 @@ namespace AulaPoo.Exercices.Ex02
 {
     public class Inimigo_02
     {
-        public string Nome;
-        private float Vida = 100f;
+        public string Nome { get; set; }
+        private float Vida { get; set; }
 
-        public string Atacar()
+        public Inimigo_02(float _vida = 100f)
+        {
+            Vida = _vida;
+        }
+
+        public virtual string Atacar()
         {
             return $"O {Nome} atacou!";
         }

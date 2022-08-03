@@ -9,8 +9,15 @@ namespace AulaPoo.Exercices.Ex03
 {
     public class Voador_03 : Inimigo_02
     {
-        public int Asas = 2;
-        public float AlturaMax = 100.0f;
+        public int Asas { get; set; }
+        public float AlturaMax { get; set; }
+
+        public Voador_03(string _nome, int _asas = 2, float _altura = 100.0f)
+        {
+            Asas = _asas;
+            AlturaMax = _altura;
+            Nome = _nome;
+        }
 
         public string Subir()
         {
@@ -22,7 +29,7 @@ namespace AulaPoo.Exercices.Ex03
             return $"O {Nome} está descendo!";
         }
 
-        public string Atacar()
+        public override string Atacar()
         {
             AlturaMax += 15f;
             return "O inimgo aéreo atacou com sucesso, agora ele pode voar mais alto!";
